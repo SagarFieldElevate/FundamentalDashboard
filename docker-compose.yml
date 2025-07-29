@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  fundamental-dashboard:
+    build: .
+    container_name: fundamental-dashboard
+    ports:
+      - "3009:3009"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - dashboard-network
+
+networks:
+  dashboard-network:
+    external: true
+    name: dashboard_dashboard-network

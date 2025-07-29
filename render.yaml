@@ -1,0 +1,28 @@
+# Render Blueprint
+services:
+  # Web Service - Using Docker
+  - type: web
+    name: crypto-dashboard
+    runtime: docker
+    repo: https://github.com/YOUR_USERNAME/YOUR_REPO # Update this with your repo
+    envVars:
+      - key: REACT_APP_DUNE_API_KEY
+        sync: false # Set this in Render dashboard
+    buildCommand: docker build -t crypto-dashboard .
+    startCommand: docker run -p 80:80 crypto-dashboard
+    healthCheckPath: /
+    
+# Alternative: Static Site (uncomment if you prefer static deployment)
+# services:
+#   - type: web
+#     name: crypto-dashboard-static
+#     env: static
+#     buildCommand: npm install && npm run build
+#     staticPublishPath: ./build
+#     envVars:
+#       - key: REACT_APP_DUNE_API_KEY
+#         sync: false
+#     routes:
+#       - type: rewrite
+#         source: /*
+#         destination: /index.html

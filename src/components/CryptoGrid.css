@@ -1,0 +1,25 @@
+.crypto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+@media (min-width: 1600px) {
+  .crypto-grid {
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  }
+}
+
+@media (min-width: 2000px) {
+  .crypto-grid {
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2em;
+  color: #94a3b8;
+}

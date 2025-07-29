@@ -1,0 +1,203 @@
+/* Economic Analytics Page - Green/Emerald Theme */
+.economic-analytics-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #064e3b 0%, #14532d 100%);
+  color: #e0e6ed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated background with economic theme */
+.economic-analytics-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(5, 150, 105, 0.1) 0%, transparent 50%);
+  z-index: 0;
+  animation: economicShift 25s ease-in-out infinite;
+}
+
+@keyframes economicShift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-15px, -15px) scale(1.02); }
+  66% { transform: translate(15px, 15px) scale(0.98); }
+}
+
+.economic-header {
+  background: rgba(6, 78, 59, 0.6) !important;
+  border-bottom: 1px solid rgba(34, 197, 94, 0.2) !important;
+}
+
+.analytics-header h1 {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.refresh-button.economic, .nav-button {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.refresh-button.economic:hover, .nav-button:hover {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: #10b981;
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+}
+
+/* Loading spinner with economic colors */
+.loading-spinner.economic {
+  border: 3px solid rgba(34, 197, 94, 0.1);
+  border-top-color: #10b981;
+}
+
+/* Economic overview section */
+.economic-overview {
+  padding: 40px 60px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.overview-card {
+  background: rgba(6, 78, 59, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.overview-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.8em;
+  color: #f0fdf4;
+}
+
+.overview-card p {
+  margin: 0;
+  color: #a7f3d0;
+  font-size: 1.1em;
+}
+
+/* Economic grid styling */
+.economic-grid {
+  background: transparent;
+}
+
+.economic-card {
+  background: rgba(6, 78, 59, 0.4) !important;
+  border: 1px solid rgba(34, 197, 94, 0.2) !important;
+}
+
+.economic-card::before {
+  background: linear-gradient(90deg, #10b981, #059669, #34d399) !important;
+}
+
+.economic-card:hover {
+  border-color: rgba(34, 197, 94, 0.4) !important;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 60px rgba(34, 197, 94, 0.15) !important;
+}
+
+.query-id.economic {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.2));
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #a7f3d0;
+}
+
+.economic-chart {
+  background: rgba(6, 78, 59, 0.6) !important;
+  border: 1px solid rgba(34, 197, 94, 0.2) !important;
+}
+
+.economic-chart::after {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.3), rgba(16, 185, 129, 0.3)) !important;
+}
+
+/* Economic button styling */
+.economic-btn {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+}
+
+.economic-btn::before {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.economic-btn:hover {
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4) !important;
+}
+
+/* Economic modal styling */
+.economic-modal {
+  background: rgba(6, 78, 59, 0.95) !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 100px rgba(34, 197, 94, 0.15) !important;
+}
+
+.economic-modal .modal-header {
+  background: rgba(34, 197, 94, 0.1) !important;
+  border-bottom: 1px solid rgba(34, 197, 94, 0.2) !important;
+}
+
+.economic-info {
+  background: rgba(34, 197, 94, 0.1) !important;
+  border: 1px solid rgba(34, 197, 94, 0.2) !important;
+}
+
+/* Table styling for economic data */
+.economic-card .data-table th {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.2));
+  border-bottom: 2px solid rgba(34, 197, 94, 0.3);
+}
+
+.economic-card .data-table tbody tr:hover {
+  background: rgba(34, 197, 94, 0.05);
+}
+
+/* Special styling for economic indicators */
+.positive-indicator {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.negative-indicator {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.neutral-indicator {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .economic-overview {
+    padding: 30px 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .economic-overview {
+    padding: 20px;
+  }
+  
+  .overview-card {
+    padding: 20px;
+  }
+  
+  .overview-card h3 {
+    font-size: 1.4em;
+  }
+}
